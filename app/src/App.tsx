@@ -4,6 +4,8 @@ import { RegisterPage } from './pages/RegisterPage';
 import { AuthenticatedRoute } from './components/AuthenticatedRoute';
 import { AppPage } from './pages/AppPage';
 import { ConversationPage } from './pages/conversations/ConversationPage';
+import { ConversationChannelPage } from './pages/conversations/ConversationChannelPage';
+import { ConversationPageGuard } from './guards/ConversationPageGuard';
 
 function App() {
   return (
