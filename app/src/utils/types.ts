@@ -257,3 +257,9 @@ export type FetchMessagePayload = {
   id: number;
   messages: MessageType[];
 };
+
+export type DivMouseEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
+export type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;
+export type DragEvent = React.DragEvent<HTMLTextAreaElement>;
+export type ClipboardEvent = React.ClipboardEvent<HTMLTextAreaElement>;
+export type FormEvent = React.FormEvent<HTMLFormElement>;
