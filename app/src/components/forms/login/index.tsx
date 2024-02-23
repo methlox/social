@@ -35,8 +35,9 @@ export const LoginForm = () => {
             console.log(err);
         }
     };
+
     return (
-        <form>
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <InputContainer>
                 <InputLabel htmlFor="username">Username</InputLabel>
                 <InputField
@@ -56,7 +57,7 @@ export const LoginForm = () => {
             <Button>Login</Button>
             <div className={styles.footerText}>
                 <span>Don't have an account? </span>
-                <Link to="/register">
+                <Link to="/register" target='_blank'>
                     <span>Register</span>
                 </Link>
             </div>
