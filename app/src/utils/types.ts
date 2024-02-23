@@ -293,3 +293,58 @@ export type CallInitiatePayload = {
   receiver: User;
   callType: CallType;
 };
+
+export type MessagePanelBodyProps = {
+  isTyping: boolean;
+};
+
+export type AddGroupRecipientParams = {
+  id: number;
+  username: string;
+};
+
+export type AddGroupUserMessagePayload = {
+  group: Group;
+  user: User;
+};
+
+export type RemoveGroupUserMessagePayload = {
+  group: Group;
+  user: User;
+};
+
+export type HandleFriendRequestAction = 'accept' | 'reject' | 'cancel';
+
+export type CancelFriendRequestResponse = {
+  id: number;
+};
+
+export type AcceptFriendRequestResponse = {
+  friend: Friend;
+  friendRequest: FriendRequest;
+};
+
+export type RateLimitType = 'group' | 'private';
+
+export type UpdateRateLimitPayload = {
+  type: RateLimitType;
+  status: boolean;
+};
+
+export type UpdateProfileParams = Partial<{
+  about: string;
+  avatar: File;
+  banner: File;
+}>;
+
+export type Attachment = {
+  id: number;
+  file: File;
+};
+
+export type SystemMessageLevel = 'info' | 'warning' | 'error';
+export type SystemMessageType = {
+  id: number;
+  content: string;
+  level: SystemMessageLevel;
+};

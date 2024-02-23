@@ -21,7 +21,8 @@ import {
   DeleteMessageParams,
   DeleteMessageResponse,
   MessageType,
-  ConversationType
+  ConversationType,
+  AddGroupRecipientParams
 } from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -134,3 +135,5 @@ export const createMessage = (
 
 export const searchUsers = (query: string) =>
   axiosClient.get<User[]>(`/users/search?query=${query}`, config);
+  export const addGroupRecipient = ({ id, username }: AddGroupRecipientParams) =>
+  axiosClient.post(`/groups/${id}/recipients`, { username }, config);
