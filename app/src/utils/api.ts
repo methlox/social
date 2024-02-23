@@ -1,29 +1,33 @@
 import axios, { AxiosRequestConfig } from "axios";
 import {
-  UserCredentialsParams,
-  CreateUserParams,
-  User,
-  UpdateStatusParams,
-  Group,
+  AcceptFriendRequestResponse,
+  AddGroupRecipientParams,
+  CancelFriendRequestResponse,
+  Conversation,
+  ConversationType,
+  CreateConversationParams,
   CreateGroupParams,
-  RemoveGroupRecipientParams,
-  UpdateGroupOwnerParams,
-  UpdateGroupDetailsPayload,
-  FetchGroupMessagePayload,
   CreateMessageParams,
+  CreateUserParams,
   DeleteGroupMessageParams,
   DeleteGroupMessageResponse,
-  EditMessagePayload,
-  GroupMessageType,
-  Conversation,
-  FetchMessagePayload,
-  CreateConversationParams,
   DeleteMessageParams,
   DeleteMessageResponse,
+  EditMessagePayload,
+  FetchGroupMessagePayload,
+  FetchMessagePayload,
+  Friend,
+  FriendRequest,
+  Group,
+  GroupMessageType,
   MessageType,
-  ConversationType,
-  AddGroupRecipientParams
-} from "./types";
+  RemoveGroupRecipientParams,
+  UpdateGroupDetailsPayload,
+  UpdateGroupOwnerParams,
+  UpdateStatusParams,
+  User,
+  UserCredentialsParams,
+} from './types';
 
 const API_URL = process.env.REACT_APP_API_URL;
 const axiosClient = axios.create({ baseURL: API_URL });
@@ -135,5 +139,47 @@ export const createMessage = (
 
 export const searchUsers = (query: string) =>
   axiosClient.get<User[]>(`/users/search?query=${query}`, config);
-  export const addGroupRecipient = ({ id, username }: AddGroupRecipientParams) =>
+
+export const addGroupRecipient = ({ id, username }: AddGroupRecipientParams) =>
   axiosClient.post(`/groups/${id}/recipients`, { username }, config);
+
+export const fetchFriends = () => axiosClient.get<Friend[]>("/friends", config);
+
+export const fetchFriendRequests = () =>
+  axiosClient.get<FriendRequest[]>("/friends/requests", config);
+
+export const createFriendRequest = (username: string) =>
+  axiosClient.post<FriendRequest>("/friends/requests", { username }, config);
+
+export const cancelFriendRequest = (id: number) =>
+  axiosClient.delete<CancelFriendRequestResponse>(
+    `/friends/requests/${id}/cancel`,
+    config
+  );
+
+export const acceptFriendRequest = (id: number) =>
+  axiosClient.patch<AcceptFriendRequestResponse>(
+    `/friends/requests/${id}/accept`,
+    {},
+    config
+  );
+
+export const rejectFriendRequest = (id: number) =>
+  axiosClient.patch<FriendRequest>(
+    `/friends/requests/${id}/reject`,
+    {},
+    config
+  );
+
+export const removeFriend = (id: number) =>
+  axiosClient.delete<Friend>(`/friends/${id}/delete`, config);
+
+export const checkConversationOrCreate = (recipientId: number) =>
+  axiosClient.get<Conversation>(`/exists/conversations/${recipientId}`, config);
+
+export const completeUserProfile = (data: FormData) =>
+  axiosClient.post("/users/profiles", data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
