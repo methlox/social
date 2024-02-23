@@ -263,3 +263,33 @@ export type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;
 export type DragEvent = React.DragEvent<HTMLTextAreaElement>;
 export type ClipboardEvent = React.ClipboardEvent<HTMLTextAreaElement>;
 export type FormEvent = React.FormEvent<HTMLFormElement>;
+
+export type CallPayload = {
+  recipientId: number;
+  conversationId: number;
+  caller: User;
+};
+
+export type HandleCallType = 'accept' | 'reject';
+
+export type AcceptedCallPayload = {
+  acceptor: User;
+  caller: User;
+  conversation: Conversation;
+};
+
+export type SetVideoRefPayload = {
+  localVideoRef?: React.RefObject<HTMLVideoElement>;
+  remoteVideoRef?: React.RefObject<HTMLVideoElement>;
+};
+
+export type CallType = 'video' | 'audio';
+
+export type CallInitiatePayload = {
+  localStream: MediaStream;
+  isCalling: boolean;
+  activeConversationId: number;
+  caller: User;
+  receiver: User;
+  callType: CallType;
+};
