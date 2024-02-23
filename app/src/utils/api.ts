@@ -17,7 +17,10 @@ import {
   GroupMessageType,
   Conversation,
   FetchMessagePayload,
-  CreateConversationParams
+  CreateConversationParams,
+  DeleteMessageParams,
+  DeleteMessageResponse,
+  MessageType
 } from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -99,3 +102,16 @@ export const getConversationMessages = (conversationId: number) =>
 
 export const postNewConversation = (data: CreateConversationParams) =>
   axiosClient.post<Conversation>(`/conversations`, data, config);
+
+export const deleteMessage = ({ id, messageId }: DeleteMessageParams) =>
+  axiosClient.delete<DeleteMessageResponse>(
+    `/conversations/${id}/messages/${messageId}`,
+    config
+  );
+
+export const editMessage = ({ content, id, messageId }: EditMessagePayload) =>
+  axiosClient.patch<MessageType>(
+    `/conversations/${id}/messages/${messageId}`,
+    { content },
+    config
+  );
