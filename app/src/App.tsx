@@ -7,7 +7,7 @@ function App() {
     <Routes>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        {/* <Route element={<AuthenticatedRoute children={<AppPage />} />}>
+        <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="conversations" element={<ConversationPage />}>
             <Route
               path=":id"
@@ -16,7 +16,7 @@ function App() {
               }
             />
           </Route>
-          <Route path="groups" element={<GroupPage />}>
+          {/* <Route path="groups" element={<GroupPage />}>
             <Route
               path=":id"
               element={<GroupPageGuard children={<GroupChannelPage />} />}
@@ -32,8 +32,8 @@ function App() {
           </Route>
           <Route path="calls" element={<CallsPage />}>
             <Route path="current" element={<CurrentCallPage />} />
-          </Route>
-        </Route> */}
+          </Route> */}
+        </Route>
       </Routes>
   );
 }

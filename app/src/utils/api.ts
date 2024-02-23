@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { UserCredentialsParams, CreateUserParams } from "./types";
+import { UserCredentialsParams, CreateUserParams, User } from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
 const axiosClient = axios.create({ baseURL: API_URL });
@@ -13,3 +13,5 @@ export const postRegisterUser = (data: CreateUserParams) =>
 
 export const checkUsernameExists = (username: string) =>
   axiosClient.get(`/users/check?username=${username}`, config);
+
+export const getAuthUser = () => axiosClient.get<User>(`/auth/status`, config);
