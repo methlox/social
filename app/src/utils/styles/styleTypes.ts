@@ -3,7 +3,11 @@ export type InputContainerProps = Partial<{
 }>;
 
 export type PageProps = Partial<{
-    display: string;
-    justifyContent: string;
-    alignItems: string;
-  }>;
+  display: string;
+  justifyContent: string;
+  alignItems: string;
+}>;
+
+export type SidebarItemProps = Partial<{
+  active: boolean;
+}>;

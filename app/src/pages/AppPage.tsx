@@ -5,6 +5,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { RootState } from '../store';
 import { SelectableTheme } from '../utils/types';
 import { DarkTheme, LightTheme } from '../utils/themes';
+import { LayoutPage } from '../utils/styles';
 
 export const AppPage = () => {
     const { theme } = useSelector((state: RootState) => state.settings);
