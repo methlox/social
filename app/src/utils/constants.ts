@@ -39,3 +39,10 @@ export enum CDN_URL {
   ORIGINAL = 'https://chuachat.ams3.cdn.digitaloceanspaces.com/original/',
   PREVIEW = 'https://chuachat.ams3.digitaloceanspaces.com/preview/',
 }
+
+export enum WebsocketEvents {
+  VOICE_CALL_ACCEPTED = 'onVoiceCallAccepted',
+  VOICE_CALL_HANG_UP = 'onVoiceCallHangUp',
+  VOICE_CALL_REJECTED = 'onVoiceCallRejected',
+  VIDEO_CALL_REJECTED = 'onVideoCallRejected',
+}
