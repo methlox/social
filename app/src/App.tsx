@@ -9,6 +9,8 @@ import { ConversationPageGuard } from './guards/ConversationPageGuard';
 import { GroupPage } from './pages/group/GroupPage';
 import { GroupPageGuard } from './guards/GroupPageGuard';
 import { GroupChannelPage } from './pages/group/GroupChannelPage';
+import { FriendsLayoutPage } from './pages/friends/FriendsLayoutPage';
+import { FriendRequestPage } from './pages/friends/FriendRequestPage';
 
 function App() {
   return (
