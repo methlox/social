@@ -9,6 +9,12 @@ import {
   RemoveGroupRecipientParams,
   UpdateGroupOwnerParams,
   UpdateGroupDetailsPayload,
+  FetchGroupMessagePayload,
+  CreateMessageParams,
+  DeleteGroupMessageParams,
+  DeleteGroupMessageResponse,
+  EditMessagePayload,
+  GroupMessageType,
   
 } from "./types";
 
@@ -50,3 +56,30 @@ export const leaveGroup = (id: number) =>
 
 export const updateGroupDetails = ({ id, data }: UpdateGroupDetailsPayload) =>
   axiosClient.patch<Group>(`/groups/${id}/details`, data, config);
+
+  export const fetchGroupMessages = (id: number) =>
+  axiosClient.get<FetchGroupMessagePayload>(`/groups/${id}/messages`, config);
+
+export const postGroupMessage = ({ id, content }: CreateMessageParams) =>
+  axiosClient.post(`/groups/${id}/messages`, { content }, config);
+
+  export const deleteGroupMessage = ({
+    id,
+    messageId,
+  }: DeleteGroupMessageParams) =>
+    axiosClient.delete<DeleteGroupMessageResponse>(
+      `/groups/${id}/messages/${messageId}`,
+      config
+    );
+  
+  export const editGroupMessage = ({
+    content,
+    id,
+    messageId,
+  }: EditMessagePayload) =>
+    axiosClient.patch<GroupMessageType>(
+      `/groups/${id}/messages/${messageId}`,
+      { content },
+      config
+    );
+  

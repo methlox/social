@@ -191,3 +191,59 @@ export type ConversationTypeData = {
   type: ConversationType;
   label: string;
 };
+
+export type FetchGroupMessagePayload = {
+  id: number;
+  messages: GroupMessageType[];
+};
+
+export type MessageEventPayload = {
+  message: MessageType;
+  conversation: Conversation;
+};
+
+export type CreateMessageParams = {
+  id: number;
+  content: string;
+};
+
+export type ConversationMessage = {
+  id: number;
+  messages: MessageType[];
+};
+
+export type GroupMessage = {
+  id: number;
+  messages: GroupMessageType[];
+};
+
+export type DeleteMessageParams = {
+  id: number;
+  messageId: number;
+};
+
+export type DeleteGroupMessageParams = {
+  id: number;
+  messageId: number;
+};
+
+export type DeleteMessageResponse = {
+  conversationId: number;
+  messageId: number;
+};
+
+export type DeleteGroupMessageResponse = {
+  groupId: number;
+  messageId: number;
+};
+
+export type EditMessagePayload = {
+  id: number;
+  messageId: number;
+  content: string;
+};
+
+export type GroupMessageEventPayload = {
+  message: GroupMessageType;
+  group: Group;
+};
