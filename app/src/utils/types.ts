@@ -184,3 +184,10 @@ export type Points = {
 };
 
 export type ContextMenuEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
+
+export type ConversationType = 'group' | 'private';
+
+export type ConversationTypeData = {
+  type: ConversationType;
+  label: string;
+};

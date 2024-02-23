@@ -1,4 +1,4 @@
-import { UserSidebarItemType } from "./types";
+import { UserSidebarItemType, ConversationTypeData } from "./types";
 
 export const userSidebarItems: UserSidebarItemType[] = [
   {
@@ -20,6 +20,17 @@ export const userSidebarItems: UserSidebarItemType[] = [
   {
     id: "calls",
     pathname: "/calls",
+  },
+];
+
+export const chatTypes: ConversationTypeData[] = [
+  {
+    type: 'private',
+    label: 'Private',
+  },
+  {
+    type: 'group',
+    label: 'Group',
   },
 ];
 
