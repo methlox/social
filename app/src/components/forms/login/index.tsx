@@ -6,6 +6,7 @@ import {
     InputField,
     InputLabel,
 } from '../../../utils/styles';
+import styles from '../index.module.scss';
 
 export const LoginForm = () => {
 
@@ -16,7 +17,7 @@ export const LoginForm = () => {
                 <InputField />
             </InputContainer>
             <Button>Login</Button>
-            <div>
+            <div className={styles.footerText}>
                 <span>Don't have an account? </span>
                 <Link to="/register">
                     <span>Register</span>
