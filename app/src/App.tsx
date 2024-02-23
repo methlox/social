@@ -43,9 +43,9 @@ function App() {
             <Route path="profile" element={<SettingsProfilePage />} />
             <Route path="appearance" element={<SettingsAppearancePage />} />
           </Route>
-          {/* <Route path="calls" element={<CallsPage />}>
+          <Route path="calls" element={<CallsPage />}>
             <Route path="current" element={<CurrentCallPage />} />
-          </Route> */}
+          </Route>
         </Route>
       </Routes>
   );
