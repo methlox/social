@@ -186,3 +186,9 @@ export const completeUserProfile = (data: FormData) =>
       "Content-Type": "multipart/form-data",
     },
   });
+
+export const updateUserProfile = (data: FormData) =>
+  axiosClient.patch<User>("/users/profiles", data, {
+    ...config,
+    headers: { "Content-Type": "multipart/form-data" },
+  });

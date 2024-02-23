@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { MoonLoader } from 'react-spinners';
 import { Edit } from 'akar-icons';
-import { UserBanner } from '../../components/settings/profile/UserBanner';
+import { UserBanner } from '../../components/profile/UserBanner';
 import { OverlayStyle, Page } from '../../utils/styles';
 import {
   ProfileAboutSection,
@@ -15,7 +15,7 @@ import { Button } from '../../utils/styles/button';
 import { updateUserProfile } from '../../utils/api';
 import { AuthContext } from '../../utils/context/AuthContext';
 import { CDN_URL } from '../../utils/constants';
-import { UserAvatar } from '../../components/settings/profile/UserAvatar';
+import { UserAvatar } from '../../components/profile/UserAvatar';
 
 export const SettingsProfilePage = () => {
   const { user, updateAuthUser } = useContext(AuthContext);
