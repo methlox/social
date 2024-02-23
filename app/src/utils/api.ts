@@ -20,7 +20,8 @@ import {
   CreateConversationParams,
   DeleteMessageParams,
   DeleteMessageResponse,
-  MessageType
+  MessageType,
+  ConversationType
 } from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -115,3 +116,18 @@ export const editMessage = ({ content, id, messageId }: EditMessagePayload) =>
     { content },
     config
   );
+
+export const createMessage = (
+  id: string,
+  type: ConversationType,
+  data: FormData
+) => {
+  const url =
+    type === "private"
+      ? `/conversations/${id}/messages`
+      : `/groups/${id}/messages`;
+  return axiosClient.post(url, data, {
+    headers: { "Content-Type": "multipart/form-data" },
+    ...config,
+  });
+};
