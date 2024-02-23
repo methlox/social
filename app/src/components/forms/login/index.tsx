@@ -1,5 +1,8 @@
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import { postLoginUser } from '../../../utils/api';
+import { UserCredentialsParams } from '../../../utils/types';
 import {
     Button,
     InputContainer,
@@ -15,19 +18,19 @@ export const LoginForm = () => {
         formState: { errors },
     } = useForm<UserCredentialsParams>();
     const navigate = useNavigate();
-    const socket = useContext(SocketContext);
+    // const socket = useContext(SocketContext);
 
     const onSubmit = async (data: UserCredentialsParams) => {
-        console.log(socket);
-        console.log(socket.connected);
+        // console.log(socket);
+        // console.log(socket.connected);
         try {
             await postLoginUser(data);
             console.log('Success');
-            socket.connect();
-            console.log(socket.connected);
+            // socket.connect();
+            // console.log(socket.connected);
             navigate('/conversations');
         } catch (err) {
-            console.log(socket.connected);
+            // console.log(socket.connected);
             console.log(err);
         }
     };
