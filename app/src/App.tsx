@@ -6,6 +6,9 @@ import { AppPage } from './pages/AppPage';
 import { ConversationPage } from './pages/conversations/ConversationPage';
 import { ConversationChannelPage } from './pages/conversations/ConversationChannelPage';
 import { ConversationPageGuard } from './guards/ConversationPageGuard';
+import { GroupPage } from './pages/group/GroupPage';
+import { GroupPageGuard } from './guards/GroupPageGuard';
+import { GroupChannelPage } from './pages/group/GroupChannelPage';
 
 function App() {
   return (
@@ -27,11 +30,11 @@ function App() {
               element={<GroupPageGuard children={<GroupChannelPage />} />}
             />
           </Route>
-          {/* <Route path="friends" element={<FriendsLayoutPage />}>
+          <Route path="friends" element={<FriendsLayoutPage />}>
             <Route path="requests" element={<FriendRequestPage />} />
             <Route path="blocked" element={<div>Blocked</div>} />
           </Route>
-          <Route path="settings" element={<SettingsPage />}>
+          {/* <Route path="settings" element={<SettingsPage />}>
             <Route path="profile" element={<SettingsProfilePage />} />
             <Route path="appearance" element={<SettingsAppearancePage />} />
           </Route>
