@@ -131,3 +131,6 @@ export const createMessage = (
     ...config,
   });
 };
+
+export const searchUsers = (query: string) =>
+  axiosClient.get<User[]>(`/users/search?query=${query}`, config);
