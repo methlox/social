@@ -11,6 +11,9 @@ import { GroupPageGuard } from './guards/GroupPageGuard';
 import { GroupChannelPage } from './pages/group/GroupChannelPage';
 import { FriendsLayoutPage } from './pages/friends/FriendsLayoutPage';
 import { FriendRequestPage } from './pages/friends/FriendRequestPage';
+import { SettingsPage } from './pages/settings/SettingsPage';
+import { SettingsProfilePage } from './pages/settings/SettingsProfilePage';
+import { SettingsAppearancePage } from './pages/settings/SettingsAppearancePage';
 
 function App() {
   return (
