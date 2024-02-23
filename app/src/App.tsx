@@ -4,6 +4,7 @@ import { RegisterPage } from './pages/RegisterPage';
 import { AuthenticatedRoute } from './components/AuthenticatedRoute';
 import { AppPage } from './pages/AppPage';
 
+
 function App() {
   return (
     <Routes>
