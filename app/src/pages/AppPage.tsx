@@ -6,6 +6,7 @@ import { RootState } from '../store';
 import { SelectableTheme } from '../utils/types';
 import { DarkTheme, LightTheme } from '../utils/themes';
 import { LayoutPage } from '../utils/styles';
+import { UserSidebar } from '../components/sidebars/UserSidebar';
 
 export const AppPage = () => {
     const { theme } = useSelector((state: RootState) => state.settings);
@@ -22,6 +23,11 @@ export const AppPage = () => {
                         : LightTheme
             }
         >
+            {/* {isReceivingCall && caller && <CallReceiveDialog />} */}
+            <LayoutPage>
+                <UserSidebar />
+                <Outlet />
+            </LayoutPage>
         </ThemeProvider>
     );
 };
