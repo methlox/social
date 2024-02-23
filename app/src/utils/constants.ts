@@ -46,3 +46,10 @@ export enum WebsocketEvents {
   VOICE_CALL_REJECTED = 'onVoiceCallRejected',
   VIDEO_CALL_REJECTED = 'onVideoCallRejected',
 }
+
+export enum SenderEvents {
+  VIDEO_CALL_INITIATE = 'onVideoCallInitiate', 
+  VIDEO_CALL_ACCEPT = 'videoCallAccepted',
+  VOICE_CALL_INITIATE = 'onVoiceCallInitiate',
+  VOICE_CALL_ACCEPT = 'onVoiceCallAccepted',
+}
