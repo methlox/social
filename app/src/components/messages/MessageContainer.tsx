@@ -24,7 +24,7 @@ import {
   setSelectedMessage,
   toggleContextMenu,
 } from '../../store/messageContainerSlice';
-import { SystemMessage } from './system/SystemMessage';
+// import { SystemMessage } from './system/SystemMessage';
 import { SystemMessageList } from './system/SystemMessageList';
 
 export const MessageContainer = () => {

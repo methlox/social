@@ -21,13 +21,13 @@ function App() {
               }
             />
           </Route>
-          {/* <Route path="groups" element={<GroupPage />}>
+          <Route path="groups" element={<GroupPage />}>
             <Route
               path=":id"
               element={<GroupPageGuard children={<GroupChannelPage />} />}
             />
           </Route>
-          <Route path="friends" element={<FriendsLayoutPage />}>
+          {/* <Route path="friends" element={<FriendsLayoutPage />}>
             <Route path="requests" element={<FriendRequestPage />} />
             <Route path="blocked" element={<div>Blocked</div>} />
           </Route>

@@ -27,7 +27,7 @@ import {
   UpdateStatusParams,
   User,
   UserCredentialsParams,
-} from './types';
+} from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
 const axiosClient = axios.create({ baseURL: API_URL });
@@ -82,6 +82,9 @@ export const deleteGroupMessage = ({
     `/groups/${id}/messages/${messageId}`,
     config
   );
+
+export const fetchGroupById = (id: number) =>
+  axiosClient.get<Group>(`/groups/${id}`, config);
 
 export const editGroupMessage = ({
   content,
