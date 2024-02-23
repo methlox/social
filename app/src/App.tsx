@@ -1,4 +1,3 @@
-import { PropsWithChildren, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { LoginPage } from './pages/LoginPage';
 
@@ -6,9 +5,9 @@ import { LoginPage } from './pages/LoginPage';
 function App() {
   return (
     <Routes>
-        <Route path="/register" element={<RegisterPage />} />
+        {/* <Route path="/register" element={<RegisterPage />} /> */}
         <Route path="/login" element={<LoginPage />} />
-        <Route element={<AuthenticatedRoute children={<AppPage />} />}>
+        {/* <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="conversations" element={<ConversationPage />}>
             <Route
               path=":id"
@@ -34,7 +33,7 @@ function App() {
           <Route path="calls" element={<CallsPage />}>
             <Route path="current" element={<CurrentCallPage />} />
           </Route>
-        </Route>
+        </Route> */}
       </Routes>
   );
 }

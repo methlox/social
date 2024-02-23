@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import {
-    InputContainerProps
+    InputContainerProps,
+    PageProps
 } from './styleTypes'
 
 export const InputField = styled.input`
@@ -79,4 +80,14 @@ export const Button = styled.button`
     color: #878787a2;
     cursor: not-allowed;
   }
+`;
+
+export const Page = styled.div<PageProps>`
+  background-color: #1a1a1a;
+  height: 100%;
+  width: 100%;
+  display: ${(props) => props.display};
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.alignItems};
+  overflow: hidden;
 `;
