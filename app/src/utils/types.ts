@@ -139,3 +139,7 @@ export type ContextMenuItemType = {
   color: string;
   ownerOnly: boolean;
 };
+
+export type UpdateStatusParams = {
+  statusMessage: string;
+};
