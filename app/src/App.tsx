@@ -36,11 +36,11 @@ function App() {
             <Route path="requests" element={<FriendRequestPage />} />
             <Route path="blocked" element={<div>Blocked</div>} />
           </Route>
-          {/* <Route path="settings" element={<SettingsPage />}>
+          <Route path="settings" element={<SettingsPage />}>
             <Route path="profile" element={<SettingsProfilePage />} />
             <Route path="appearance" element={<SettingsAppearancePage />} />
           </Route>
-          <Route path="calls" element={<CallsPage />}>
+          {/* <Route path="calls" element={<CallsPage />}>
             <Route path="current" element={<CurrentCallPage />} />
           </Route> */}
         </Route>
