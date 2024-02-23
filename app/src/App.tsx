@@ -14,6 +14,8 @@ import { FriendRequestPage } from './pages/friends/FriendRequestPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { SettingsProfilePage } from './pages/settings/SettingsProfilePage';
 import { SettingsAppearancePage } from './pages/settings/SettingsAppearancePage';
+import { CallsPage } from './pages/calls/CallsPage';
+import { CurrentCallPage } from './pages/calls/CurrentCallPage';
 
 function App() {
   return (
