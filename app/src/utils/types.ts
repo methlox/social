@@ -182,3 +182,5 @@ export type Points = {
   x: number;
   y: number;
 };
+
+export type ContextMenuEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
