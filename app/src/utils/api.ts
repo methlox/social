@@ -15,7 +15,9 @@ import {
   DeleteGroupMessageResponse,
   EditMessagePayload,
   GroupMessageType,
-  
+  Conversation,
+  FetchMessagePayload,
+  CreateConversationParams
 } from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -57,29 +59,43 @@ export const leaveGroup = (id: number) =>
 export const updateGroupDetails = ({ id, data }: UpdateGroupDetailsPayload) =>
   axiosClient.patch<Group>(`/groups/${id}/details`, data, config);
 
-  export const fetchGroupMessages = (id: number) =>
+export const fetchGroupMessages = (id: number) =>
   axiosClient.get<FetchGroupMessagePayload>(`/groups/${id}/messages`, config);
 
 export const postGroupMessage = ({ id, content }: CreateMessageParams) =>
   axiosClient.post(`/groups/${id}/messages`, { content }, config);
 
-  export const deleteGroupMessage = ({
-    id,
-    messageId,
-  }: DeleteGroupMessageParams) =>
-    axiosClient.delete<DeleteGroupMessageResponse>(
-      `/groups/${id}/messages/${messageId}`,
-      config
-    );
-  
-  export const editGroupMessage = ({
-    content,
-    id,
-    messageId,
-  }: EditMessagePayload) =>
-    axiosClient.patch<GroupMessageType>(
-      `/groups/${id}/messages/${messageId}`,
-      { content },
-      config
-    );
-  
+export const deleteGroupMessage = ({
+  id,
+  messageId,
+}: DeleteGroupMessageParams) =>
+  axiosClient.delete<DeleteGroupMessageResponse>(
+    `/groups/${id}/messages/${messageId}`,
+    config
+  );
+
+export const editGroupMessage = ({
+  content,
+  id,
+  messageId,
+}: EditMessagePayload) =>
+  axiosClient.patch<GroupMessageType>(
+    `/groups/${id}/messages/${messageId}`,
+    { content },
+    config
+  );
+
+export const getConversations = () =>
+  axiosClient.get<Conversation[]>(`/conversations`, config);
+
+export const getConversationById = (id: number) =>
+  axiosClient.get<Conversation>(`/conversations/${id}`, config);
+
+export const getConversationMessages = (conversationId: number) =>
+  axiosClient.get<FetchMessagePayload>(
+    `/conversations/${conversationId}/messages`,
+    config
+  );
+
+export const postNewConversation = (data: CreateConversationParams) =>
+  axiosClient.post<Conversation>(`/conversations`, data, config);

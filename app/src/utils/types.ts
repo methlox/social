@@ -247,3 +247,13 @@ export type GroupMessageEventPayload = {
   message: GroupMessageType;
   group: Group;
 };
+
+export type CreateConversationParams = {
+  username: string;
+  message: string;
+};
+
+export type FetchMessagePayload = {
+  id: number;
+  messages: MessageType[];
+};
