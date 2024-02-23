@@ -143,3 +143,42 @@ export type ContextMenuItemType = {
 export type UpdateStatusParams = {
   statusMessage: string;
 };
+
+export type CreateGroupParams = {
+  users: string[];
+  title: string;
+};
+
+export type RemoveGroupRecipientParams = {
+  id: number;
+  userId: number;
+};
+
+export type UpdateGroupOwnerParams = {
+  id: number;
+  newOwnerId: number;
+};
+
+export type UpdateGroupDetailsPayload = {
+  id: number;
+  data: FormData;
+};
+
+export enum UpdateGroupAction {
+  NEW_MESSAGE = 'newMessage',
+}
+
+export type UpdateGroupPayload = {
+  type?: UpdateGroupAction;
+  group: Group;
+};
+
+export type GroupParticipantLeftPayload = {
+  group: Group;
+  userId: number;
+};
+
+export type Points = {
+  x: number;
+  y: number;
+};

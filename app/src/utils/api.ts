@@ -4,6 +4,12 @@ import {
   CreateUserParams,
   User,
   UpdateStatusParams,
+  Group,
+  CreateGroupParams,
+  RemoveGroupRecipientParams,
+  UpdateGroupOwnerParams,
+  UpdateGroupDetailsPayload,
+  
 } from "./types";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -25,3 +31,22 @@ export const updateStatusMessage = (data: UpdateStatusParams) =>
   axiosClient.patch("/users/presence/status", data, config);
 
 export const logoutUser = () => axiosClient.post("/auth/logout", {}, config);
+export const fetchGroups = () => axiosClient.get<Group[]>(`/groups`, config);
+
+export const createGroup = (params: CreateGroupParams) =>
+  axiosClient.post(`/groups`, params, config);
+
+export const removeGroupRecipient = ({
+  id,
+  userId,
+}: RemoveGroupRecipientParams) =>
+  axiosClient.delete<Group>(`/groups/${id}/recipients/${userId}`, config);
+
+export const updateGroupOwner = ({ id, newOwnerId }: UpdateGroupOwnerParams) =>
+  axiosClient.patch(`/groups/${id}/owner`, { newOwnerId }, config);
+
+export const leaveGroup = (id: number) =>
+  axiosClient.delete(`/groups/${id}/recipients/leave`, config);
+
+export const updateGroupDetails = ({ id, data }: UpdateGroupDetailsPayload) =>
+  axiosClient.patch<Group>(`/groups/${id}/details`, data, config);
