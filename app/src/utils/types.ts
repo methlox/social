@@ -37,3 +37,5 @@ export type User = {
   presence?: UserPresence;
   peer: UserPeer;
 };
+
+export type SelectableTheme = 'dark' | 'light';
