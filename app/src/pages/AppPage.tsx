@@ -33,6 +33,7 @@ import { useVoiceCall } from '../utils/hooks/sockets/call/useVoiceCall';
 import { useVoiceCallAccepted } from '../utils/hooks/sockets/call/useVoiceCallAccepted';
 import { useVoiceCallHangUp } from '../utils/hooks/sockets/call/useVoiceCallHangUp';
 import { useVoiceCallRejected } from '../utils/hooks/sockets/call/useVoiceCallRejected';
+import { ThemeProvider } from 'styled-components';
 
 export const AppPage = () => {
   const { user } = useContext(AuthContext);
