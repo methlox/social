@@ -3,7 +3,7 @@ import { LoginPage } from './pages/LoginPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { AuthenticatedRoute } from './components/AuthenticatedRoute';
 import { AppPage } from './pages/AppPage';
-
+import { ConversationPage } from './pages/conversations/ConversationPage';
 
 function App() {
   return (
