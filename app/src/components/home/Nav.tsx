@@ -1,13 +1,11 @@
-import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { navbarItems } from '../../utils/constants';
-import { Button } from '../../utils/styles/button';
 import { Navbar, NavbarItem } from '../../utils/styles/navbar';
+import './styles.scss'
 
 export const Nav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <Navbar>
@@ -22,15 +20,6 @@ export const Nav = () => {
             </NavbarItem>
           ))}
         </div>
-        {/* <Button
-          size="sm"
-          flex={true}
-          variant="primary"
-          onClick={() => setShowModal(true)}
-        >
-          <AiOutlineUserAdd size={24} />
-          <span>Add Friend</span>
-        </Button> */}
       </Navbar>
     </>
   );

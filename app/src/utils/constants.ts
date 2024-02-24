@@ -101,12 +101,12 @@ export const friendsNavbarItems = [
 export const navbarItems = [
   {
     id: "signin",
-    label: "Sign In",
+    label: "SIGN IN",
     pathname: "/login",
   },
   {
     id: "signup",
-    label: "Sign Up",
+    label: "SIGN UP",
     pathname: "/register",
   },
 ];

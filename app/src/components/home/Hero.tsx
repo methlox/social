@@ -1,10 +1,12 @@
+import Body from './Body'
 import { Nav } from './Nav'
-import './index.module.scss'
+import './styles.scss'
 
 function Hero() {
     return (
         <>
             <Nav />
+            <Body />
         </>
     )
 }

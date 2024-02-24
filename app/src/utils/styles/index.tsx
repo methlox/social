@@ -94,7 +94,7 @@ export const Button = styled.button`
 `;
 
 export const Page = styled.div<PageProps>`
-  // background-color: #1a1a1a;
+  background-color: #1a1a1a;
   height: 100%;
   width: 100%;
   display: ${(props) => props.display};

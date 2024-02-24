@@ -11,6 +11,11 @@
   src: url(./fonts/SF-Pro-Text-Medium.otf);
 }
 
+@font-face {
+  font-family: sfHeavy;
+  src: url(./fonts/SF-Pro-Text-Heavy.otf);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -36,16 +41,6 @@ html {
   /* background-color: #1a1a1a; */
   font-family: sfRegular;
   color: #fff;
-}
-
-body {
-  background-position: center center;
-  position: relative;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-image: url("./__assets__/1.png");
 }
 
 h1 {

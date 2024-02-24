@@ -7,7 +7,7 @@ export const Navbar = styled.nav`
   display: flex;
   font-size: 20px;
   padding: 48px 60px;
-  height: 150px;
+  height: 100px;
   box-sizing: border-box;
   border-bottom: 1px solid #30303035;
   justify-content: space-between;
@@ -15,6 +15,10 @@ export const Navbar = styled.nav`
     display: flex;
     align-items: center;
     gap: 80px;
+    margin-left: 1000px;
+    font: sfHeavy;
+    font-size: 1.5rem;
+    color: #000000;
   }
 `;
 
