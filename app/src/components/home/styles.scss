@@ -1,9 +1,9 @@
 body {
   background-position: center center;
-  // position: relative;
+  position: relative;
   // height: 100%;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-size: cover;
   background-image: url("../../__assets__/hero.png");
 }
@@ -16,11 +16,32 @@ body {
 
 @media (max-width: 767px) {
   body {
-    background-image: url("../../__assets__/1.png");
+    background-image: url("../../__assets__/hero-mobile.png");
   }
   .getstarted {
-    margin-top: 470px;
-    margin-left: 30px;
+    margin-top: 490px;
+    margin-left: 170px;
   }
 }
 
+@media (min-width: 767px) {
+  body {
+    // background-image: url("../../__assets__/1-01.png");
+  }
+  .getstarted {
+    margin-top: 490px;
+    margin-left: 170px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url("../../__assets__/hero.png");
+  }
+  .getstarted {
+    margin-top: 490px;
+    margin-left: 170px;
+  }
+
+}
