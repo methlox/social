@@ -41,6 +41,10 @@ export type FriendsNavbarItemProps = {
   active: boolean;
 };
 
+export type NavbarItemProps = {
+  active: boolean;
+};
+
 export type FlexProps = Partial<{
   justifyContent: string;
   alignItems: string;

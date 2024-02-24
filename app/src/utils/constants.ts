@@ -98,6 +98,19 @@ export const friendsNavbarItems = [
   },
 ];
 
+export const navbarItems = [
+  {
+    id: "signin",
+    label: "Sign In",
+    pathname: "/login",
+  },
+  {
+    id: "signup",
+    label: "Sign Up",
+    pathname: "/register",
+  },
+];
+
 export const settingsItems: SettingsItemType[] = [
   {
     id: "profile",

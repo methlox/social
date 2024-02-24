@@ -33,9 +33,19 @@ html,
 
 body,
 html {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   font-family: sfRegular;
   color: #fff;
+}
+
+body {
+  background-position: center center;
+  position: relative;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("./__assets__/1.png");
 }
 
 h1 {

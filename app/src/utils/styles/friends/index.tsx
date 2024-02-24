@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import {
   FriendRequestItemIconProps,
   FriendsNavbarItemProps,
+  NavbarItemProps
 } from '../styleTypes';
 
 export const FriendsPageStyle = styled.div`
@@ -9,6 +10,8 @@ export const FriendsPageStyle = styled.div`
   height: 100%;
   width: 100%;
 `;
+
+
 
 export const FriendsNavbar = styled.nav`
   display: flex;

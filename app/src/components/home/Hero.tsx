@@ -1,9 +1,10 @@
-import { FriendPageNavbar } from "../navbar/FriendsPageNavbar"
+import { Nav } from './Nav'
+import './index.module.scss'
 
 function Hero() {
     return (
         <>
-            <FriendPageNavbar />
+            <Nav />
         </>
     )
 }

@@ -57,6 +57,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="conversations" element={<ConversationPage />}>
             <Route
