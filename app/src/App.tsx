@@ -24,6 +24,7 @@ import { Socket } from 'socket.io-client';
 import { Provider as ReduxProvider } from 'react-redux';
 import { AuthContext } from './utils/context/AuthContext';
 import { store } from './store';
+import HomePage from './pages/HomePage';
 
 enableMapSet();
 
@@ -54,7 +55,7 @@ function App() {
   return (
     <AppWithProviders user={user} setUser={setUser} socket={socket}>
       <Routes>
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path='/' element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route element={<AuthenticatedRoute children={<AppPage />} />}>
           <Route path="conversations" element={<ConversationPage />}>
