@@ -21,7 +21,6 @@ Before you try to run this project locally, you must have both the React & NestJ
 ### Pre-requisites
 
 - Node.js v16
-  - **8/31/2022** - I've tested this on my Ubuntu server with Node.js v18 and there was an issue with the database connection. I was able to fix this by downgrading to Node.js v16. If you have any issues with the database connection, please try Node.js v16.
 - MySQL Server (or any SQL database that is supported by TypeORM).
 
 ### Setting up the Backend

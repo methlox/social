@@ -87,13 +87,13 @@ export const ConversationSidebar = () => {
         <ScrollableContainer>
           <SidebarContainerStyle>
             {conversationType === 'private'
-              ? conversations.map((conversation) => (
+              ? conversations.map((conversation: any) => (
                   <ConversationSidebarItem
                     key={conversation.id}
                     conversation={conversation}
                   />
                 ))
-              : groups.map((group) => (
+              : groups.map((group: any) => (
                   <GroupSidebarItem
                     key={group.id}
                     group={group}

@@ -13,7 +13,7 @@ export const CallsSidebar = () => {
     <SidebarStyle>
       <SidebarHeader>Friends</SidebarHeader>
       <ScrollableContainer>
-        {friends.map((friend) => (
+        {friends.map((friend: any) => (
           <CallSidebarItem friend={friend} />
         ))}
       </ScrollableContainer>

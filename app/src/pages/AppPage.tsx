@@ -115,7 +115,7 @@ export const AppPage = () => {
    */
   useEffect(() => {
     if (!peer) return;
-    peer.on('call', async (incomingCall) => {
+    peer.on('call', async (incomingCall: any) => {
       console.log('Incoming Call!!!!!');
       console.log(callType);
       const constraints = { video: callType === 'video', audio: true };
@@ -133,7 +133,7 @@ export const AppPage = () => {
 
   useEffect(() => {
     if (!call) return;
-    call.on('stream', (remoteStream) =>
+    call.on('stream', (remoteStream: any) =>
       dispatch(setRemoteStream(remoteStream))
     );
     call.on('close', () => console.log('call was closed'));
@@ -162,7 +162,7 @@ export const AppPage = () => {
         connection.on('error', () => {
           console.log('an error has occured');
         });
-        connection.on('data', (data) => {
+        connection.on('data', (data: any) => {
           console.log('data received', data);
         });
         connection.on('close', () => {

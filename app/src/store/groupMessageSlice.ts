@@ -102,7 +102,7 @@ const selectGroupMessageId = (state: RootState, id: number) => id;
 
 export const selectGroupMessage = createSelector(
   [selectGroupMessages, selectGroupMessageId],
-  (groupMessages, id) => groupMessages.find((gm) => gm.id === id)
+  (groupMessages, id) => groupMessages.find((gm: any) => gm.id === id)
 );
 
 export const { addGroupMessage, editGroupMessage } = groupMessagesSlice.actions;

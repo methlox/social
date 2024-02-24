@@ -20,7 +20,7 @@ export const MessageAttachmentContainer = () => {
 
   return (
     <MessageAttachmentContainerStyle>
-      {attachments.map((attachment) => (
+      {attachments.map((attachment: any) => (
         <MessageAttachmentStyle
           key={attachment.id}
           style={{

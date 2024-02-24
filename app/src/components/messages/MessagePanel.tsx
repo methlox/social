@@ -70,7 +70,7 @@ export const MessagePanel: FC<Props> = ({
     const formData = new FormData();
     formData.append('id', routeId);
     trimmedContent && formData.append('content', trimmedContent);
-    attachments.forEach((attachment) =>
+    attachments.forEach((attachment: any) =>
       formData.append('attachments', attachment.file)
     );
     try {

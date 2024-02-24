@@ -15,14 +15,14 @@ export function useVoiceCallHangUp() {
     socket.on(WebsocketEvents.VOICE_CALL_HANG_UP, () => {
       console.log('received onVoiceCallHangUp');
       localStream &&
-        localStream.getTracks().forEach((track) => {
+        localStream.getTracks().forEach((track: any) => {
           console.log(localStream.id);
           console.log('stopping local track: ', track);
           track.stop();
         });
       console.log(remoteStream);
       remoteStream &&
-        remoteStream.getTracks().forEach((track) => {
+        remoteStream.getTracks().forEach((track: any) => {
           console.log(remoteStream.id);
           console.log('stopping remote track', track);
           track.stop();

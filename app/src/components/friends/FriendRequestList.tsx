@@ -10,7 +10,7 @@ export const FriendRequestList = () => {
   return (
     <FriendListContainer>
       {friendRequests.length === 0 && <div>No Friend Requests :(</div>}
-      {friendRequests.map((friendRequest) => (
+      {friendRequests.map((friendRequest: any) => (
         <FriendRequestItem
           key={friendRequest.id}
           friendRequest={friendRequest}

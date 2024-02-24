@@ -63,7 +63,7 @@ const selectConversationId = (state: RootState, id: number) => id;
 
 export const selectConversationById = createSelector(
   [selectConversations, selectConversationId],
-  (conversations, conversationId) => conversations.find((c) => c.id === conversationId)
+  (conversations, conversationId) => conversations.find((c: any) => c.id === conversationId)
 );
 
 // Action creators are generated for each case reducer function

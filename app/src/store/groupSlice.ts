@@ -165,7 +165,7 @@ const selectGroupId = (state: RootState, id: number) => id;
 
 export const selectGroupById = createSelector(
   [selectGroups, selectGroupId],
-  (groups, groupId) => groups.find((g) => g.id === groupId)
+  (groups, groupId) => groups.find((g: any) => g.id === groupId)
 );
 
 export const {
