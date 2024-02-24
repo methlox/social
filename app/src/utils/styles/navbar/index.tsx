@@ -20,6 +20,13 @@ export const Navbar = styled.nav`
     font-size: 1.5rem;
     color: #000000;
   }
+  @media (max-width: 767px) {
+    & .navLinks {
+      margin-left: 12rem;
+      gap: 20px;
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 export const NavbarItem = styled.span<NavbarItemProps>`

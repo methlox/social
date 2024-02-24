@@ -1,14 +1,26 @@
 body {
   background-position: center center;
-  position: relative;
-  height: 100%;
+  // position: relative;
+  // height: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-size: cover;
   background-image: url("../../__assets__/hero.png");
 }
 
 .getstarted {
-    margin-top: 470px;
-    margin-left: 630px;
+  margin-top: 470px;
+  margin-left: 630px;
 }
+
+
+@media (max-width: 767px) {
+  body {
+    background-image: url("../../__assets__/1.png");
+  }
+  .getstarted {
+    margin-top: 470px;
+    margin-left: 30px;
+  }
+}
+
