@@ -126,7 +126,7 @@ export const ConversationSidebarItemStyle = styled.div<ConversationSidebarItemPr
   transition: 100ms background-color ease;
   &:hover {
     background-color: ${({ theme }) =>
-      theme.conversationSidebar.conversationItem.hover.backgroundColor};
+    theme.conversationSidebar.conversationItem.hover.backgroundColor};
   }
 
   & .title {
@@ -150,14 +150,14 @@ export const ConversationSidebarItemDetails = styled.div`
     font-weight: 600;
     font-size: 16px;
     color: ${({ theme }) =>
-      theme.conversationSidebar.conversationItem.title.color};
+    theme.conversationSidebar.conversationItem.title.color};
   }
   & .conversationLastMessage {
     font-size: 15px;
     font-weight: 500;
     color: #868686;
     color: ${({ theme }) =>
-      theme.conversationSidebar.conversationItem.title.lastMessageColor};
+    theme.conversationSidebar.conversationItem.title.lastMessageColor};
   }
 `;
 
@@ -638,9 +638,9 @@ export const LayoutPage = styled.div`
   display: flex;
 `;
 
-export const UserSidebarStyle = styled.div`
+export const UserSidebarStyle = styled.div<{ theme: Theme }>`
   height: 100%;
-  background-color: ${({ theme }: { theme: Theme }) =>
+  background-color: ${({ theme }) =>
     theme.userSidebar.backgroundColor};
   display: flex;
   flex: 0 0 80px;
@@ -652,12 +652,12 @@ export const UserSidebarStyle = styled.div`
   }
 `;
 
-export const SidebarStyle = styled.div`
+export const SidebarStyle = styled.div<{ theme: Theme }>`
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 400px;
-  background-color: ${({ theme }: { theme: Theme }) =>
+  background-color: ${({ theme }) =>
     theme.conversationSidebar.backgroundColor};
   flex: 0 0 auto;
   @media (max-width: 800px) {
