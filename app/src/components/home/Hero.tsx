@@ -5,7 +5,9 @@ import './styles.scss'
 function Hero() {
     return (
         <>
-            <Nav />
+            <div className='nav'>
+                <Nav />
+            </div>
             <Body />
         </>
     )

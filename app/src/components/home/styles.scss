@@ -1,9 +1,9 @@
 body {
   background-position: center center;
   position: relative;
-  // height: 100%;
+  height: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-size: cover;
   background-image: url("../../__assets__/hero.png");
 }
@@ -11,26 +11,48 @@ body {
 .getstarted {
   margin-top: 470px;
   margin-left: 630px;
+  position: center;
+
+}
+
+.nav {
+  visibility: hidden;
+}
+
+@media (min-width: 200px) {
+  body {
+    background-image: url("../../__assets__/hero-mobile.png");
+  }
+  .getstarted {
+    margin-top: 490px;
+    margin-left: 100px;
+    position: center;
+
+  }
 }
 
 
-@media (max-width: 767px) {
+@media (min-width: 500px) {
   body {
     background-image: url("../../__assets__/hero-mobile.png");
   }
   .getstarted {
     margin-top: 490px;
     margin-left: 170px;
+    position: center;
+
   }
 }
 
 @media (min-width: 767px) {
   body {
-    // background-image: url("../../__assets__/1-01.png");
+    background-image: url("../../__assets__/hero-tab.png");
   }
   .getstarted {
+    position: relative;
     margin-top: 490px;
-    margin-left: 170px;
+    margin-left: 300px;
+    position: center;
   }
 
 }
@@ -40,8 +62,13 @@ body {
     background-image: url("../../__assets__/hero.png");
   }
   .getstarted {
-    margin-top: 490px;
-    margin-left: 170px;
+    margin-top: 500px;
+    margin-left: 630px;
+    position: center;
+
+  }
+  .nav {
+    visibility: visible;
   }
 
 }

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import {
-    NavbarItemProps
+  NavbarItemProps
 } from '../styleTypes';
 
 export const Navbar = styled.nav`
@@ -14,17 +14,28 @@ export const Navbar = styled.nav`
   & .navLinks {
     display: flex;
     align-items: center;
-    gap: 80px;
-    margin-left: 1000px;
     font: sfHeavy;
-    font-size: 1.5rem;
     color: #000000;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 500px) {
     & .navLinks {
       margin-left: 12rem;
       gap: 20px;
       font-size: 1.3rem;
+    }
+  }
+  @media (min-width: 767px) {
+    & .navLinks {
+      margin-left: 12rem;
+      gap: 20px;
+      font-size: 1.3rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    & .navLinks {
+      margin-left: 1000px;
+      gap: 80px;
+      font-size: 1.5rem;  nb
     }
   }
 `;
@@ -32,8 +43,8 @@ export const Navbar = styled.nav`
 export const NavbarItem = styled.span<NavbarItemProps>`
   cursor: pointer;
   ${({ active }) =>
-        active &&
-        css`
+    active &&
+    css`
       text-decoration: underline;
       text-underline-offset: 14px;
     `}
