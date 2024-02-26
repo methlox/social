@@ -5,7 +5,7 @@ import {
 
 export const Navbar = styled.nav`
   display: flex;
-  font-size: 20px;
+  font-size: 17px;
   padding: 48px 60px;
   height: 100px;
   box-sizing: border-box;

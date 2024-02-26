@@ -1,6 +1,8 @@
 # Frontend
 
+![alt text](image.png)
 ![preview](https://i.imgur.com/DQlHtCB.png)
+
 
 ## Installation
 
